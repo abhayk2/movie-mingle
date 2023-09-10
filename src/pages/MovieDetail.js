@@ -17,7 +17,7 @@ export const MovieDetail = () => {
       console.log(json);
     }
     fetchMovie();
-  },[]);
+  },[param.id]);
 
   useEffect(()=>{
     document.title = `${movie.title}`
@@ -68,7 +68,7 @@ export const MovieDetail = () => {
                   </p>
                   <p className="my-4">
                     <span className="mr-2 font-bold">IMDB Code:</span>
-                    <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="no">{movie.imdb_id}</a>
+                    <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noopener noreferrer">{movie.imdb_id}</a>
                   </p>
         </div>
 
